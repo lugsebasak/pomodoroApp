@@ -1,5 +1,6 @@
 import React, { Component, useState } from "react";
 import { render } from "react-dom";
+AppRegistry.registerComponent("main", () => App);
 import {
   StyleSheet,
   SafeAreaView,
@@ -10,20 +11,20 @@ import {
   Text,
   Alert,
 } from "react-native";
-import { CountdownCircleTimer } from "react-native-countdown-circle-timer";
-import { Constants } from "expo-constants";
 
 import TaskInput from "./components/TaskInput";
 import TaskItem from "./components/TaskItem";
 import Colors from "./constants/Colors";
 import Header from "./components/Header";
-import Card from "./components/Card";
+import BreakCountdown from "./components/BreakCountdown";
+import WorkCountdown from "./components/WorkCountdown";
 
 export default function App() {
   const [taskList, setTaskList] = useState([]);
   const [isAddMode, setIsAddMode] = useState(false);
   const [isPlaying, setIsPlaying] = useState(true);
   const [key, setKey] = useState(0);
+  const [isBreak, setIsBreak] = useState(false);
 
   const taskInputHandler = (enteredText) => {
     setEnteredTask(enteredText);
@@ -50,7 +51,7 @@ export default function App() {
     setIsAddMode(false);
   };
 
-  const timeMinSec = (remainingTime) => {
+  /*const timeMinSec = (remainingTime) => {
     if (remainingTime === 0) {
       timeIsUp();
     }
@@ -59,44 +60,32 @@ export default function App() {
     if (seconds < 10) return `${minutes}:0${seconds}`;
     return `${minutes}:${seconds}`;
   };
+*/
 
   const restartHandler = () => {
     setKey((prevKey) => prevKey + 1);
   };
 
-  const timeIsUp = () => {
+  /*const timeIsUp = () => {
     Alert.alert("Time Is Up!", "Let's take a break :)", [
       {
         text: "Okay",
         style: "destructive",
         onPress: () => {
+          setIsBreak(true);
+          <Break />;
           setKey((prevKey) => prevKey + 1);
         },
       },
     ]);
     return;
-  };
+  };*/
 
   return (
     <SafeAreaView style={styles.screen}>
       <Header style={styles.title_text} title="POMODORO" />
       <View style={styles.timer}>
-        <CountdownCircleTimer
-          key={key}
-          isPlaying={isPlaying}
-          duration={10}
-          colors={[
-            ["#004777", 0.4],
-            ["#F7B801", 0.4],
-            ["#A30000", 0.2],
-          ]}
-        >
-          {({ remainingTime, animatedColor }) => (
-            <Animated.Text style={{ color: animatedColor, fontSize: 35 }}>
-              {timeMinSec(remainingTime)}
-            </Animated.Text>
-          )}
-        </CountdownCircleTimer>
+        <WorkCountdown />
       </View>
       <View style={styles.buttonContainer}>
         <Button
@@ -173,45 +162,3 @@ const styles = StyleSheet.create({
               timeIsUp;
             }
           }}*/
-
-/*<View style={{backgroundColor:'#ccc',padding:10,flexDirection:'row'}}>
-          <TextInput
-            style={style.input}
-            value={text}
-            onChangeText={(text)=>this.setState({text})} 
-          />
-          
-        </View>
-         
-  constructor(){
-    super();
-    this.state={
-      text:'',
-      data:[]
-    }
-  } 
-
-  handleSave=()=>{
-    const {text,data}=this.state;
-    data.push({text});
-    this.setState({data,text:''});
-
-  }
-  const {text,data}=this.state;
-  <View>
-          {data.map((item)=>{
-            return(<ItemList text={item.text}/>)
-          })}
-        </View>
-<TouchableOpacity onPress={this.handleSave} style={style.button}>
-              <Text style={style.title_text}>Ekle</Text>
-          </TouchableOpacity>*/
-
-/*export default function App() {
-  const handlePress=()=>console.log("Text pressed")
-  return (
-    <SafeAreaView style={styles.container}>
-      <Text numberOfLines={1} onPress={handlePress}>POMODORO Timing</Text>
-    </SafeAreaView>
-  );
-}*/
