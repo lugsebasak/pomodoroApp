@@ -1,6 +1,5 @@
 import React, { Component, useState } from "react";
 import { render } from "react-dom";
-AppRegistry.registerComponent("main", () => App);
 import {
   StyleSheet,
   SafeAreaView,
@@ -16,13 +15,12 @@ import TaskInput from "./components/TaskInput";
 import TaskItem from "./components/TaskItem";
 import Colors from "./constants/Colors";
 import Header from "./components/Header";
-import BreakCountdown from "./components/BreakCountdown";
 import WorkCountdown from "./components/WorkCountdown";
 
 export default function App() {
   const [taskList, setTaskList] = useState([]);
   const [isAddMode, setIsAddMode] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(true);
+
   const [key, setKey] = useState(0);
   const [isBreak, setIsBreak] = useState(false);
 
@@ -51,51 +49,15 @@ export default function App() {
     setIsAddMode(false);
   };
 
-  /*const timeMinSec = (remainingTime) => {
-    if (remainingTime === 0) {
-      timeIsUp();
-    }
-    const minutes = Math.floor(remainingTime / 60);
-    const seconds = remainingTime % 60;
-    if (seconds < 10) return `${minutes}:0${seconds}`;
-    return `${minutes}:${seconds}`;
-  };
-*/
-
   const restartHandler = () => {
     setKey((prevKey) => prevKey + 1);
   };
-
-  /*const timeIsUp = () => {
-    Alert.alert("Time Is Up!", "Let's take a break :)", [
-      {
-        text: "Okay",
-        style: "destructive",
-        onPress: () => {
-          setIsBreak(true);
-          <Break />;
-          setKey((prevKey) => prevKey + 1);
-        },
-      },
-    ]);
-    return;
-  };*/
 
   return (
     <SafeAreaView style={styles.screen}>
       <Header style={styles.title_text} title="POMODORO" />
       <View style={styles.timer}>
         <WorkCountdown />
-      </View>
-      <View style={styles.buttonContainer}>
-        <Button
-          title="Restart"
-          style={styles.timerButton}
-          onPress={() => {
-            restartHandler;
-          }}
-        />
-        <Button title="Pause" />
       </View>
       <View style={styles.taskScreen}>
         <Button
@@ -148,17 +110,9 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   buttonContainer: {
-    width: "65%",
+    alignItems: "center",
+    width: "75%",
     flexDirection: "row",
     justifyContent: "space-around",
   },
-  timerButton: {
-    width: "45%",
-  },
 });
-
-/*onComplete={() => {
-            {
-              timeIsUp;
-            }
-          }}*/
