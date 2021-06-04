@@ -6,17 +6,19 @@ import Colors from "../constants/Colors";
 
 const WorkCountdown = (props) => {
   const [key, setKey] = useState(0);
-  let [isBreak, setIsBreak] = useState(false);
+
+  let breakCheck = false;
   const [isReset, setIsReset] = useState(false);
   const [timerDuration, setTimerDuration] = useState(10);
   const [isPlaying, setIsPlaying] = useState(true);
 
   const timeMinSec = (remainingTime) => {
+    const [isBreak, setIsBreak] = useState(false);
     if (remainingTime === 0) {
       setIsBreak = !isBreak;
       if (isBreak === true) {
         breakTime();
-      } else if (isBreak === false) workTime();
+      } else workTime();
     }
     const minutes = Math.floor(remainingTime / 60);
     const seconds = remainingTime % 60;

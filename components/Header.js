@@ -21,7 +21,8 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 70,
     paddingVertical: 10,
-    backgroundColor: Colors.orange,
+
+    backgroundColor: Colors.darkRed,
     alignItems: "center",
     justifyContent: "space-between",
   },
@@ -30,7 +31,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
     paddingLeft: 10,
     paddingBottom: 20,
-    color: "black",
+    fontFamily: "OpenSans-Bold",
+    color: "white",
     fontSize: 24,
   },
   userLogo: {

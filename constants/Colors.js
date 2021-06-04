@@ -7,4 +7,7 @@ export default {
   generalBackground: "#E0E0E0",
   orange: "#FF8000",
   bgorange: "#FFE5CC",
+  purpleHeader: "#8A73C9",
+  blueForHeader: "#73B2C9",
+  darkRed: "#83142A",
 };
