@@ -9,7 +9,7 @@ import {
   Alert,
 } from "react-native";
 
-import Colors from "../constants/Colors";
+import Colors from "../../constants/Colors";
 
 const TaskInput = (props) => {
   const [enteredTask, setEnteredTask] = useState("");
@@ -64,7 +64,7 @@ const TaskInput = (props) => {
 const styles = StyleSheet.create({
   modalView: {
     margin: 20,
-    backgroundColor: Colors.generalBackground,
+    backgroundColor: Colors.water,
     borderRadius: 20,
     padding: 35,
     alignItems: "center",
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     margin: 50,
     backgroundColor: "#cccc",
     width: 240,
-    borderColor: "black",
+    borderColor: "white",
     borderWidth: 1,
     borderRadius: 7,
     padding: 5,
