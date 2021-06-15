@@ -9,5 +9,6 @@ export default {
   bgorange: "#FFE5CC",
   purpleHeader: "#8A73C9",
   blueForHeader: "#73B2C9",
+  darkHeader: "#44756D",
   darkRed: "#83142A",
 };

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import FontAwsome from "react-native-vector-icons/FontAwesome";
 class TimerDisplay extends Component {
   state = {};
   render() {
@@ -20,9 +19,9 @@ class TimerDisplay extends Component {
 
 const styles = StyleSheet.create({
   containerStyle: {
-    marginTop: "7%",
+    marginTop: "4%",
     marginBottom: "5%",
-    padding: "15%",
+    padding: "12%",
     borderColor: "white",
     borderRadius: 60,
     borderWidth: 3,
