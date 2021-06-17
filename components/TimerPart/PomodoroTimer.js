@@ -5,7 +5,7 @@ class PomodoroTimer extends Component {
   constructor(props) {
     super(props);
     this.REST_PERIOD = 0.1;
-    this.FOCUS_PERIOD = 0.5;
+    this.FOCUS_PERIOD = 25;
     this.state = {
       intervalType: "focus",
       period: this.FOCUS_PERIOD,

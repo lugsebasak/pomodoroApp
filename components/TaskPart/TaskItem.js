@@ -1,7 +1,6 @@
 import { styleSheets } from "min-document";
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Button } from "react-native";
-import { Colors } from "react-native/Libraries/NewAppScreen";
 
 import colors from "../../constants/Colors";
 

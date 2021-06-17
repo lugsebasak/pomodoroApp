@@ -64,7 +64,9 @@ const TaskInput = (props) => {
 const styles = StyleSheet.create({
   modalView: {
     margin: 20,
-    backgroundColor: Colors.water,
+    backgroundColor: "white",
+    borderColor: Colors.water,
+    borderWidth: 4,
     borderRadius: 20,
     padding: 35,
     alignItems: "center",
@@ -85,7 +87,7 @@ const styles = StyleSheet.create({
     margin: 50,
     backgroundColor: "#cccc",
     width: 240,
-    borderColor: "white",
+    borderColor: Colors.water,
     borderWidth: 1,
     borderRadius: 7,
     padding: 5,

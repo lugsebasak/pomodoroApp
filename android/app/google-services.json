@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "777597960514",
+    "firebase_url": "https://pomodoroapp-basak-default-rtdb.firebaseio.com",
+    "project_id": "pomodoroapp-basak",
+    "storage_bucket": "pomodoroapp-basak.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777597960514:android:4a95033fda70872a1548db",
+        "android_client_info": {
+          "package_name": "com.pomodoroApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777597960514-uud64bimoo9eoa3bg6pesrv29996sdav.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmVWa1JXAgJHLi_zyyFEmcaZPraF2Mvlk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777597960514-uud64bimoo9eoa3bg6pesrv29996sdav.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

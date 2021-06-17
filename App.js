@@ -11,7 +11,9 @@ import {
   Alert,
   DrawerLayoutAndroid,
 } from "react-native";
-
+//simport { Provider } from 'react-redux';
+//import { createStore, combineReducers, applyMiddleware } from 'redux';
+//import * as firebase from 'firebase';
 import Colors from "./constants/Colors";
 import TaskScreen from "./components/TaskPart/TaskScreen";
 import PomodoroTimer from "./components/TimerPart/PomodoroTimer";
@@ -30,6 +32,15 @@ export default class App extends React.Component {
     );
   }
 }
+
+// // Initialize Firebase
+// const firebaseConfig = {
+//   apiKey: "<your-api-key>",
+//   authDomain: "<your-auth-domain>",
+//   databaseURL: "<your-database-url>",
+//   storageBucket: "<your-storage-bucket>",
+// };
+// const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 const styles = StyleSheet.create({
   container: {
